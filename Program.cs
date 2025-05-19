@@ -1,23 +1,16 @@
-﻿double salarioHora, horaExtra, horasTrabalhadas;
+double salarioHora, horaExtra, horasTrabalhadas;
 
 Console.WriteLine("Bem vindo(a) a calculadora de hora extra!");
 
 Console.Write("Digite o valor do salário/hora: ");
-while (!double.TryParse(Console.ReadLine()!, out salarioHora) || salarioHora <= 0) {
-    Console.WriteLine("Valor inválido, digite seu salário em R$: ");
-}
+salarioHora = double.Parse(Console.ReadLine()!);
 
 Console.Write("Digite a quantiade de horas trabalhadas: ");
-while (!double.TryParse(Console.ReadLine()!, out horasTrabalhadas) || horasTrabalhadas <= 0) {
-    Console.WriteLine("Número inválido, digite um valor maior que 0: ");
-}
+horasTrabalhadas = double.Parse(Console.ReadLine()!);
 
 
 Console.Write("Digite a quantiade de horas extras trabalhadas: ");
-while (!double.TryParse(Console.ReadLine()!, out horaExtra) || horaExtra <= 0) {
-    Console.WriteLine("Número inválido, digite um valor maior que 0: ");
-}
-
+horaExtra = double.Parse(Console.ReadLine()!);
 
 double salarioInicial = salarioHora * horasTrabalhadas;
 
